@@ -14,10 +14,8 @@ public class ShowActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show);
 
         // Get the city name from the intent
-        String cityName = getIntent().getStringExtra("CITY_NAME");
-
-        // Find the TextView and set the city name
-        TextView cityTextView = findViewById(R.id.textView_cityName);
+        String cityName = getIntent().getStringExtra("city_name");
+        TextView cityTextView = findViewById(R.id.text_city_name);
         cityTextView.setText(cityName);
 
         // Find the back button and set click listener
