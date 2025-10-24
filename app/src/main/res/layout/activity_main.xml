@@ -40,7 +40,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="bottom"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <EditText
             android:id="@+id/editText_name"
