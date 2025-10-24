@@ -67,14 +67,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Click listener for city list items
-        cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedCity = dataList.get(position);
-                Intent intent = new Intent(MainActivity.this, ShowActivity.class);
-                intent.putExtra("CITY_NAME", selectedCity);
-                startActivity(intent);
-            }
+        cityList.setOnItemClickListener((parent, view, position, id) -> {
+            String selectedCity = cityAdapter.getItem(position);
+            Intent intent = new Intent(MainActivity.this, ShowActivity.class);
+            intent.putExtra("city_name", selectedCity);
+            startActivity(intent);
         });
     }
 }
